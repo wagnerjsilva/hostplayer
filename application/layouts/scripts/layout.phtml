@@ -1,0 +1,44 @@
+<?= $this->doctype() ?>
+<html>
+    <head>
+        <?= $this->headTitle(); ?>
+
+        <?= $this->headMeta(); ?>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1"/> 
+
+        <?= $this->headStyle(); ?>
+
+        <?= $this->headLink(); ?>
+
+        <?= $this->headScript(); ?>
+    </head>
+    <body>
+        <div id="wrapper"> 
+
+            <section id="content" class="clearfix">
+                <?= $this->layout()->content ?> 
+            </section>
+
+            <footer id="footer" class="clearfix"> 
+                <ul>
+                    <?                    
+                        if ($this->logged_in) :
+                            $logout = $this->url(array('module' => 'default', 'controller' => 'login', 'action' => 'logout'), null, FALSE);
+                     ?>
+                            <li id="backToTop" class="link">Back to top</li>
+                            <li><a href="<?= $logout ?>">Logout</a></li>
+                            <li class="link" id="refreshLibrary">Refresh Library</li>
+                    <? endif; ?>                    
+                    <li>HTML5 Music Player</li>
+                    <li><a href="http://www.wagnersilva.com" target="_blank">www.wagnersilva.com</a></li>                    
+                    <li>
+                        <a href="http://www.w3.org/html/logo/">
+                            <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-semantics.png" width="165" height="64" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics">
+                        </a>
+                    </li>    
+                </ul>
+
+            </footer>
+        </div>
+    </body>
+</html>

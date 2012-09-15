@@ -1,0 +1,163 @@
+/* 
+    Document   : main
+    Created on : 14-Jan-2012, 13:48:26
+    Author     : wagner
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+body {
+    font-family: arial,georgia,serif;
+    background-color: #F0F0F0;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: auto;
+}
+
+body { min-height:540px; }     
+body[orient="portrait"] { min-height:540px; }
+body[orient="landscape"] { min-height:400px; }
+
+h2 {
+    font-size: 1.7em;
+    margin: 5px 0;
+}
+
+#content {
+    height: auto;
+}
+
+a,
+.link {
+    color: #3A2A45;
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+.left {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.hidden {
+    display: none;
+}
+
+#wrapper {
+    width: 320px;
+    margin: auto;
+}
+
+#searchControls {
+    background-color: #3A2A45;
+    height: 35px;
+    padding: 15px 0 0 50px;
+    width: 270px;
+}
+
+#searchControls #go {
+    position: relative;
+    top: -1px;
+}
+
+#player {
+    font-size: 1.4em;
+}
+
+#songList {
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+}
+
+.even {
+    background-color: #30273A;
+}
+
+footer ul li {
+    margin: 10px 0;
+}
+
+table th,table td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+table th {
+    text-align: left;
+    font-weight: bold;
+}
+
+table td {
+    height:20px;
+    vertical-align: middle;
+}
+
+table {
+    width: 100%;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.ajax_loader {
+    margin: 20px 0;
+}
+
+.artist {
+    cursor:default;
+}
+
+#searchDialog {
+    height: 100%;
+    clear: both;
+}
+
+#help {
+    float: right;
+    cursor: crosshair;
+}
+
+#albumHeader {
+    float: left;
+    margin-top: 5px;
+}
+
+#searchTerm {
+    margin: 0 10px;
+    width: 170px;
+}
+
+.login_form {
+   margin: auto;
+   width: 225px;
+}
+
+#login_wrapper {
+    margin: auto;
+    width: 155px;    
+}
+
+label {
+    
+}
+
+dd {
+    margin: 5px 0;
+}
+
+#login-label {
+    display: none;
+}

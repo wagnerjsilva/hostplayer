@@ -1,4 +1,11 @@
 <?php
+
+//hack if you are in a shared hosting environment
+if ($_SERVER['APPLICATION_ENV'] != 'development') {
+    $path = '/home/path_to_you_application';    
+    set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+}
+
 //for debugging
 function print_s($array) {
     print '<pre>';

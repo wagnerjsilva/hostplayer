@@ -94,7 +94,7 @@ class Application_Model_Music extends Zend_Db_Table_Abstract {
             header('HTTP/1.1 200 OK');
         }
 
-        header("Content-Type: $mimeType");
+        header("Content-Type: $mimeType", true);
         header('Cache-Control: public, must-revalidate, max-age=0');
         header('Pragma: no-cache');
         header('Accept-Ranges: bytes');

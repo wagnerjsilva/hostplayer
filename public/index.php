@@ -1,8 +1,7 @@
 <?php
 
-if ($_SERVER['APPLICATION_ENV'] != 'development') {
-    set_include_path('/home/wagnersi/zend/framework/library');
-}
+define('DS', DIRECTORY_SEPARATOR);
+
 
 //for debugging
 function print_s($array) {
@@ -33,5 +32,6 @@ $application = new Zend_Application(
                 APPLICATION_ENV,
                 APPLICATION_PATH . '/configs/application.ini'
 );
+
 $application->bootstrap()
         ->run();

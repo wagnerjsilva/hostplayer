@@ -19,7 +19,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         /*
          * Autoload my libraries
          */
-        $auto_loader = Zend_Loader_Autoloader::getInstance();
+        //$auto_loader = Zend_Loader_Autoloader::getInstance();
         $resource_loader = new Zend_Loader_Autoloader_Resource(
                         array(
                             'basePath' => APPLICATION_PATH,
@@ -59,48 +59,17 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
     }
 
     protected function _initDB() {
+        
+        $ENV = APPLICATION_ENV;
 
         $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini');
-        $credentials = $config->bootstrap->resources->db;
+        $credentials = $config->$ENV->resources->db;
 
         $this->db = Zend_Db::factory($credentials);
         // turn on profiler:
         $this->db->getProfiler()->setEnabled(true);
         Zend_Db_Table::setDefaultAdapter($this->db);
     }
-
-   /* protected function _initAuth() {
-
-        $this->bootstrap('view');
-        $this->view = $this->getResource('view');
-
-        $this->bootstrap('FrontController');
-        $this->_front = $this->getResource('FrontController');
-
-        $router = $this->_front->getRouter();
-        $req = new Zend_Controller_Request_Http();
-        $router->route($req);
-        $controller = $req->getControllerName();
-        $module = $req->getModuleName();
-
-        $this->_front->setRequest($req);
-        $token = $this->_front->getRequest()->getParam('access_token');
-
-        //don't try to to authenticate if it is an api call
-        if ($module != 'api') {
-            $auth = Zend_Auth::getInstance();
-            if (!$auth->hasIdentity()) {
-                $this->view->logged_in = null;
-                if ($controller != 'login') {
-                    $response = new Zend_Controller_Response_Http();
-                    $response->setRedirect('login');
-                    $this->_front->setResponse($response);
-                }
-            } else {
-                $this->view->logged_in = true;
-            }
-        }
-    } */
 
     /**
      * Setup the view
@@ -131,10 +100,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
 
     protected function _initMusicSettings() {
 
-        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini');
-        $music = $config->bootstrap->resources->music;
-
-        defined('MUSIC_PATH') || define(MUSIC_PATH, $music->path);
+        $config = new Zend_Config_Ini(APPLICATION_PATH . '/configs/application.ini');        
+        
+        $music = $config->bootstrap->resources->music;        
+   
+        if(!defined('MUSIC_PATH'))
+            define('MUSIC_PATH', $music->path);
+        
     }
 
 }

@@ -1,4 +1,4 @@
-Unlock the potential of your server or hosting account by transforming it your 
+Unlock the potential of your server or hosting account by transforming it in your 
 personal music streaming service.
 
 *** Please only use it legally, and make sure you have actually paid for your songs ***

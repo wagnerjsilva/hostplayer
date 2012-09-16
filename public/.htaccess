@@ -5,12 +5,6 @@ RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^.*$ - [NC,L]
 RewriteRule ^.*$ index.php [NC,L]
 
-#AuthName "Restricted Area" 
-#AuthType Basic 
-#AuthUserFile /home/wagnersi/music_player/public/.htpasswd 
-#AuthGroupFile /dev/null 
-#require valid-user
-
 AddType audio/mpeg mp3
 AddType audio/mp4 m4a
 AddType audio/ogg ogg

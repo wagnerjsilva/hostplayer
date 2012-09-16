@@ -1,18 +1,4 @@
-
-Transforms your hosting account into a fully fledged music player.
-
-Credits: 
-
-*   http://www.wagnersilva.com
-*   http://www.techstudiohq.com
-
-
-Dual licensed under the MIT and GPL licenses.
- * http://www.opensource.org/licenses/mit-license.php
- * http://www.gnu.org/copyleft/gpl.html
-
-
-*** Installation Guide ****
+Thanks for downloading Host Player.
 
 To Install please follow the instructions below:
 

@@ -31,7 +31,7 @@ class Application_Model_LibraryLoader extends Application_Model_Music {
             //is the directory empty
             if ($entry != "." && $entry != "..") {
                 //is the directory content as subdirectory, if it is load it's contents by calling this function again
-                $current_entry = $path . "/" . $entry;
+                $current_entry = $path . DS . $entry;
                 if (is_dir($current_entry)) {
                     #echo "<p><strong>" .$current_entry. "</strong></p>";
                     $this->reload($current_entry);
@@ -40,8 +40,10 @@ class Application_Model_LibraryLoader extends Application_Model_Music {
                     $file_info = pathinfo($current_entry);
                     if (strtolower($file_info['extension']) == 'mp3') {
 
-                        $file = preg_replace('[' . MUSIC_PATH . '/]', '', $current_entry);
-                        $file = utf8_encode($file);
+                        //$file = preg_replace('[' . MUSIC_PATH . '/]', '', $current_entry);
+                        //$file = utf8_encode($file);       
+                        
+                        $file = utf8_encode($current_entry); 
                         
                         if (!$this->checkIfTrackAlreadyInDb($file)) {
                              $track = $this->getTrackinfo($current_entry);
@@ -69,10 +71,15 @@ class Application_Model_LibraryLoader extends Application_Model_Music {
         $res = $this->getAllTracks();       
         foreach($res as $dbentry) {           
             //exit(print_s(MUSIC_PATH.'/'.$dbentry['file']));
-            $file = MUSIC_PATH.'/'.$dbentry['file'];
+            $file = $dbentry['file'];
             if(!file_exists(utf8_decode($file))) {
-                //exit(print_s($file));
-                $this->delete('id', $dbentry['id']);                
+                //exit(print_s($file));               
+                //$this->delete('id', $dbentry['id']);  
+                $where = $this->getAdapter()->quoteInto('id = ?', $dbentry['id']);
+                $this->delete($where);
+                
+                print_s('Deleted');
+                print_s($dbentry);
             }
         }
         

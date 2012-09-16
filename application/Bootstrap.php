@@ -8,6 +8,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         ini_set('memory_limit', '64M');
         ini_set('session.gc_maxlifetime', '86400');
         
+        define('DS', DIRECTORY_SEPARATOR);
+        
         
         $this->bootstrap('view');
         $this->view = $this->getResource('view');
@@ -19,19 +21,31 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap {
         /*
          * Autoload my libraries
          */
+        
+       
         //$auto_loader = Zend_Loader_Autoloader::getInstance();
-        $resource_loader = new Zend_Loader_Autoloader_Resource(
+        new Zend_Loader_Autoloader_Resource(
                         array(
                             'basePath' => APPLICATION_PATH,
                             'namespace' => '',
                             'resourceTypes' => array(
                                 'Services' => array(
-                                    'path' => '/../library/',
+                                    'path' => DS.'..'.DS.'library'.DS,
                                     'namespace' => 'Services_'
-                                ),
+                                )
                             )
                         )
         );
+        
+        
+         /*
+         * The library below will try to perform various other includes 
+         * based on Zend include path, so it can't be loaded in the same way 
+         * as the library above
+         */        
+        
+        $path = APPLICATION_PATH.DS.'..'.DS.'library'.DS.'php_reader'.DS.'library';        
+        set_include_path(get_include_path() . PATH_SEPARATOR . $path);        
 
     }
     

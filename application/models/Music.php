@@ -58,65 +58,61 @@ class Application_Model_Music extends Zend_Db_Table_Abstract {
         return $res;
     }
 
-    /*
-     * First give it the front controller object being used to manipulate the request
-     * 
-     * Then give it the full file path for a track on the server and it will return it as a http response
-     */
-    
-    public function getTrackHttpResponseHeaders(Zend_Controller_Action $controller, $track) {
-      
-        
-        $file = utf8_decode(MUSIC_PATH . "/" . $track['file']);
-        $file_size = filesize($file);
-        //$_SERVER['HTTP_RANGE'] = true;
-        if (isset($_SERVER['HTTP_RANGE'])) {
-            $partial_content = true;
-            $range = explode("-", $_SERVER['HTTP_RANGE']);
-            $offset = intval($range[0]);
-            $length = intval($range[1]) - $offset;
-        } else {
-            $partial_content = false;
-            $offset = 0;
-            $length = $file_size;
+    public function smartReadFile($location, $filename, $mimeType = 'application/octet-stream') {
+        $location = utf8_decode($location);
+        $filename = utf8_decode($filename);
+        $filename = str_replace(array('"', "'", ' ', ','), '_', $filename);
+        if (!file_exists($location)) {
+            header("HTTP/1.1 404 Not Found");
+            return;
         }
 
-        //read the data from the file
-        $handle = fopen($file, 'r');
-        $buffer = '';
-        fseek($handle, $offset);
-        $buffer = fread($handle, $length);
-        $md5_sum = md5($buffer);
-        if ($partial_content)
-            $data_size = intval($range[1]) - intval($range[0]);
-        else
-            $data_size = $file_size;
-        fclose($handle);
-        
-        $controller->getResponse()
-                ->setHeader('Content-Length', $data_size)
-                ->setHeader('Content-md5', $md5_sum)
-                ->setHeader('Accept-Ranges', 'bytes');
+        $size = filesize($location);
+        $time = date('r', filemtime($location));
 
-        if ($partial_content)
-            $controller->getResponse()
-                    ->setHeader('Content-Range', 'bytes ' . $offset . '-' . ($offset + $length) . '/' . $file_size);
+        $fm = @fopen($location, 'rb');
+        if (!$fm) {
+            header("HTTP/1.1 505 Internal server error");
+            return;
+        }
 
-        $controller->getResponse()
-                ->setHeader('Connection', 'close')
-                ->setHeader('Content-type', 'audio/mpeg')
-                ->setHeader('Content-Disposition', 'inline; filename='.$track['id'].'.mp3');
-        
-        
-      /*  $controller->getResponse()->setHeader('Expires', '', true);
-        $controller->getResponse()->setHeader('Cache-Control', 'private', true);
-        $controller->getResponse()->setHeader('Cache-Control', 'max-age=1');
-        $controller->getResponse()->setHeader('Pragma', '', false); */
+        $begin = 0;
+        $end = $size - 1;
 
+        if (isset($_SERVER['HTTP_RANGE'])) {
+            if (preg_match('/bytes=\h*(\d+)-(\d*)[\D.*]?/i', $_SERVER['HTTP_RANGE'], $matches)) {
+                $begin = intval($matches[1]);
+                if (!empty($matches[2])) {
+                    $end = intval($matches[2]);
+                }
+            }
+        }
 
+        if (isset($_SERVER['HTTP_RANGE'])) {
+            header('HTTP/1.1 206 Partial Content');
+        } else {
+            header('HTTP/1.1 200 OK');
+        }
 
-        $controller->getResponse()->setBody($buffer);
-        flush();
+        header("Content-Type: $mimeType");
+        header('Cache-Control: public, must-revalidate, max-age=0');
+        header('Pragma: no-cache');
+        header('Accept-Ranges: bytes');
+        header('Content-Length:' . (($end - $begin) + 1));
+        if (isset($_SERVER['HTTP_RANGE'])) {
+            header("Content-Range: bytes $begin-$end/$size");
+        }
+        header("Content-Disposition: inline; filename=$filename");
+        header("Content-Transfer-Encoding: binary");
+        header("Last-Modified: $time");
+
+        $cur = $begin;
+        fseek($fm, $begin, 0);
+
+        while (!feof($fm) && $cur <= $end && (connection_status() == 0)) {
+            print fread($fm, min(1024 * 16, ($end - $cur) + 1));
+            $cur += 1024 * 16;
+        }
     }
 
 }

@@ -1,8 +1,4 @@
 <?php
-
-define('DS', DIRECTORY_SEPARATOR);
-
-
 //for debugging
 function print_s($array) {
     print '<pre>';

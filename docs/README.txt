@@ -28,3 +28,11 @@ The following is a sample VHOST you might want to consider for your project.
    </Directory>
 
 </VirtualHost>
+
+
+
+***** Possible problems *****
+
+On windows if it may fail to open your music directory.
+
+Make sure Everyone can read the directory

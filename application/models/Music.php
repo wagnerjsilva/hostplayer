@@ -57,8 +57,11 @@ class Application_Model_Music extends Zend_Db_Table_Abstract {
 
         return $res;
     }
-
-    public function smartReadFile($location, $filename, $mimeType = 'application/octet-stream') {
+    
+    
+   
+    public function smartReadFile($location, $filename, $mimeType = 'application/octet-stream') {        
+        
         $location = utf8_decode($location);
         $filename = utf8_decode($filename);
         $filename = str_replace(array('"', "'", ' ', ','), '_', $filename);
@@ -74,7 +77,9 @@ class Application_Model_Music extends Zend_Db_Table_Abstract {
         if (!$fm) {
             header("HTTP/1.1 505 Internal server error");
             return;
-        }
+        }      
+        
+        $_SERVER['HTTP_RANGE'] = false;
 
         $begin = 0;
         $end = $size - 1;
@@ -87,7 +92,7 @@ class Application_Model_Music extends Zend_Db_Table_Abstract {
                 }
             }
         }
-
+        
         if (isset($_SERVER['HTTP_RANGE'])) {
             header('HTTP/1.1 206 Partial Content');
         } else {
@@ -102,7 +107,7 @@ class Application_Model_Music extends Zend_Db_Table_Abstract {
         if (isset($_SERVER['HTTP_RANGE'])) {
             header("Content-Range: bytes $begin-$end/$size");
         }
-        header("Content-Disposition: inline; filename=$filename");
+        header("Content-Disposition: inline; filename=song.mp3");
         header("Content-Transfer-Encoding: binary");
         header("Last-Modified: $time");
 

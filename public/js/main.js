@@ -10,7 +10,7 @@ handlePlayer = {
         playlist.add({
             title:title,
             artist:artist,
-            mp3:'/download/index/song/'+id,
+            mp3:'/download/index/song/'+id+'.mp3',
             poster: ""
         });  
         

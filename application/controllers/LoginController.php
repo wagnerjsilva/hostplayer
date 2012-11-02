@@ -63,14 +63,13 @@ class LoginController extends Zend_Controller_Action {
             // Invalid entries
             $this->view->form = $form;
             return $this->render('index'); // re-render the login form
-        }
-        
+        }    
 
         // Get our authentication adapter and check credentials
         $adapter = $this->getAuthAdapter($form->getValues());
         $auth = Zend_Auth::getInstance();
-        $result = $auth->authenticate($adapter);
-        
+        $result = $auth->authenticate($adapter);             
+       
         if (!$result->isValid()) {
             // Invalid credentials
             $form->setDescription('Invalid credentials provided');

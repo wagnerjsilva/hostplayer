@@ -10,11 +10,21 @@ class DownloadController extends Zend_Controller_Action {
 
     public function indexAction() {
 
-        $id = $this->_request->getParam('song');
+        $id = (int)$this->_request->getParam('song');        
+       
         $res = $this->music->getTrackUsingId($id);
         $res = $res[0];        
         $this->music->smartReadFile($res['file'], basename($res['file']));
+        
+       /* $id = $this->_request->getParam('song');
+
+        $res = $this->music->getTrackUsingId($id);
+        
+        $this->music->getTrackHttpResponseHeaders ($this, $res[0]); */
+        
     }
+    
+    
 
    
 }

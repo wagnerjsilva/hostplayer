@@ -46,18 +46,14 @@ class Application_Model_LibraryLoader extends Application_Model_Music {
                         $file = utf8_encode($current_entry); 
                         
                         if (!$this->checkIfTrackAlreadyInDb($file)) {
-                             $track = $this->getTrackinfo($current_entry);
-                             $track['file'] = $file;
-                             $this->saveTrackInfoToDb($track);
-                           /* try {
-                                $track = $this->getTrackinfo($current_entry);
-                                $track['file'] = $file;
-                                $this->saveTrackInfoToDb($track);
+                            try {
+			     	$track = $this->getTrackinfo($current_entry);
+                             	$track['file'] = $file;
+                             	$this->saveTrackInfoToDb($track);
                             } catch (Exception $e) {
                                 Zend_Registry::get('log')->info('Error parsing ' . $current_entry . ' ' . $e->getMessage());
                                 continue;
-                            } */
-                            # print '</pre>';                       
+                            }
                         } 
                     }
                 }

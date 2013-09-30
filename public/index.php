@@ -1,18 +1,7 @@
 <?php
-
-//hack if you are in a shared hosting environment
-if ($_SERVER['APPLICATION_ENV'] != 'development') {
-    $path = '/home/wagnersi/zend/framework/library';    
-    #exit($path);
-    set_include_path($path);
-}
-
-//for debugging
-function print_s($array) {
-    print '<pre>';
-    print_r($array);
-    print '</pre>';
-}
+//set the zend library locally so we don't need to configure servers for this include path
+$path = getcwd().'/../vendor/';
+set_include_path($path . PATH_SEPARATOR . get_include_path());
 
 // Define path to application directory
 defined('APPLICATION_PATH')

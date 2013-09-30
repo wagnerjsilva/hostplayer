@@ -2,8 +2,9 @@
 
 //hack if you are in a shared hosting environment
 if ($_SERVER['APPLICATION_ENV'] != 'development') {
-    $path = '/home/path_to_you_application';    
-    set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+    $path = '/home/wagnersi/zend/framework/library';    
+    #exit($path);
+    set_include_path($path);
 }
 
 //for debugging

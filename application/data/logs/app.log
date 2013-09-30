@@ -1,4 +1,68 @@
-2013-09-30T17:07:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/AC_DC/Back In Black/07 You Shook Me All Night Long.mp3
-2013-09-30T17:07:15+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Alavaro e wagner/Experimental/Ainda posso voltar.mp3
-2013-09-30T17:08:49+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/AC_DC/Back In Black/07 You Shook Me All Night Long.mp3
-2013-09-30T17:08:50+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Alavaro e wagner/Experimental/Ainda posso voltar.mp3
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/01 losing grip.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/04 i'm with you.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/05 mobile.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/06 unwanted.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/07 tomorrow.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/08 anything but ordinary.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/09 things i'll never say.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:25:03+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Banda Eva/Unknown Album/20 Eva Voce E Eu.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/01 losing grip.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/04 i'm with you.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/05 mobile.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/06 unwanted.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/07 tomorrow.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/08 anything but ordinary.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/09 things i'll never say.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:26:35+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Banda Eva/Unknown Album/20 Eva Voce E Eu.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/01 losing grip.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/04 i'm with you.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/05 mobile.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/06 unwanted.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/07 tomorrow.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/08 anything but ordinary.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/09 things i'll never say.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:00+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Banda Eva/Unknown Album/20 Eva Voce E Eu.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/01 losing grip.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/04 i'm with you.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/05 mobile.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/06 unwanted.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/07 tomorrow.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/08 anything but ordinary.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/09 things i'll never say.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:11+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Banda Eva/Unknown Album/20 Eva Voce E Eu.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/01 losing grip.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/04 i'm with you.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/05 mobile.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/06 unwanted.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/07 tomorrow.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/08 anything but ordinary.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/09 things i'll never say.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:27:20+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Banda Eva/Unknown Album/20 Eva Voce E Eu.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'year' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/01 losing grip.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/04 i'm with you.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/05 mobile.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/06 unwanted.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/07 tomorrow.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/08 anything but ordinary.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Avril Lavigne/Unknown Album/09 things i'll never say.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:28:17+01:00 INFO (6): Error parsing /Users/wagnersilva/Music/Banda Eva/Unknown Album/20 Eva Voce E Eu.mp3 SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'track_number' at row 1
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/01 Keep On Skanking.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/02 Brain Washing.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/03 Corner Stone.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/04 All In One.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/05 Man To Man (Who The Cap Fit).MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/06 Wisdom.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/07 Mr Chatterbox.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/08 One In All.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/09 Dreamland.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/10 Run For Cover.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/11 I Like It Like This.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/12 Turn Me Loose.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/13 Brand New Second Hand.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/14 This Train.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/15 There She Goes.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/16 How Many Times.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/17 Treat You Right.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/18 Love Light Shining.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/19 Rebels Hop.MP3
+2013-09-30T19:31:14+01:00 INFO (6): Error parsing mp3 file: /Users/wagnersilva/Music/Bob Marley/The Gold Collection - 40 Rare/20 Satisfy My Soul.MP3

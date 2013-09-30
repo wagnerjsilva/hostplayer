@@ -24,6 +24,7 @@ class Application_Model_LibraryLoader extends Application_Model_Music {
     public function reload($path=MUSIC_PATH) {
         
         set_time_limit('21600');
+        ini_set('memory_limit', '512M');
 
         $CurrentWorkingDirectory = dir($path);
         //read the current dir cotents
@@ -33,7 +34,6 @@ class Application_Model_LibraryLoader extends Application_Model_Music {
                 //is the directory content as subdirectory, if it is load it's contents by calling this function again
                 $current_entry = $path . DS . $entry;
                 if (is_dir($current_entry)) {
-                    #echo "<p><strong>" .$current_entry. "</strong></p>";
                     $this->reload($current_entry);
                 } else {
                     //else foreach file that is an mp3                    
@@ -43,9 +43,10 @@ class Application_Model_LibraryLoader extends Application_Model_Music {
                         //$file = preg_replace('[' . MUSIC_PATH . '/]', '', $current_entry);
                         //$file = utf8_encode($file);       
                         
-                        $file = utf8_encode($current_entry); 
-                        
+                        $file = utf8_encode($current_entry);                         
                         if (!$this->checkIfTrackAlreadyInDb($file)) {
+                            echo "<p>Trying to insert..." .$file. "</p>";                            
+
                             try {
 			     	$track = $this->getTrackinfo($current_entry);
                              	$track['file'] = $file;
